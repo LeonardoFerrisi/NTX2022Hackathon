@@ -12,7 +12,7 @@ def connect_and_read_data(board_id):
     params.serial_port = "COM4"
 
 <<<<<<< HEAD
-    board = BoardShim(42, params)
+    # board = BoardShim(42, params)
 =======
     board = BoardShim(board_id, params)
 >>>>>>> 9612f4476577dd0f6aa61db361186a0f0c6be176
