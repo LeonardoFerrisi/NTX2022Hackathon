@@ -11,11 +11,9 @@ def connect_and_read_data(board_id):
     params = BrainFlowInputParams()
     params.serial_port = "COM4"
 
-<<<<<<< HEAD
+
     board = BoardShim(42, params)
-=======
     board = BoardShim(board_id, params)
->>>>>>> 9612f4476577dd0f6aa61db361186a0f0c6be176
     board.prepare_session()
     board.start_stream()
     time.sleep(10)
