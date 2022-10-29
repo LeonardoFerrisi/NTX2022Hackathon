@@ -7,15 +7,14 @@ SYNTH = -1
 CYTON = 0
 MUSE2016 = 42
 
-def connect_and_read_data(board_id):
+def connect_and_read_data(board_id, serial_port=None):
     params = BrainFlowInputParams()
-    params.serial_port = "COM4"
 
-<<<<<<< HEAD
-    # board = BoardShim(42, params)
-=======
+    if board_id != -1: 
+        assert serial_port != None
+        params.serial_port = serial_port
+            
     board = BoardShim(board_id, params)
->>>>>>> 9612f4476577dd0f6aa61db361186a0f0c6be176
     board.prepare_session()
     board.start_stream()
     time.sleep(10)
