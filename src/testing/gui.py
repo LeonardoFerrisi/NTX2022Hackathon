@@ -20,6 +20,10 @@ window = sg.Window("ML Model Generator", layout, size=(600,600),element_justific
 # Create an event loop
 while True:
     event, values = window.read()
+    if event == "Record Data":
+        print('Recording...')
+    elif event == "Stop Recording":
+        print('Stopped recording')
 
     # End program if user closes window or
     # presses the OK button
