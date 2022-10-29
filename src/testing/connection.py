@@ -1,4 +1,5 @@
 import time
+import argparse
 from brainflow.board_shim import BoardShim, BrainFlowInputParams, BoardIds, BrainFlowPresets
 
 # ------------------------------------------------------
@@ -7,9 +8,9 @@ CYTON = 0
 
 def connect_and_read_data():
     params = BrainFlowInputParams()
-    # params.serial_port = ""
+    params.serial_port = "COM4"
 
-    board = BoardShim(SYNTH, params)
+    board = BoardShim(42, params)
     board.prepare_session()
     board.start_stream ()
     time.sleep(10)
