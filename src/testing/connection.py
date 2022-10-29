@@ -5,14 +5,19 @@ from brainflow.board_shim import BoardShim, BrainFlowInputParams, BoardIds, Brai
 # ------------------------------------------------------
 SYNTH = -1
 CYTON = 0
+MUSE2016 = 42
 
-def connect_and_read_data():
+def connect_and_read_data(board_id):
     params = BrainFlowInputParams()
     params.serial_port = "COM4"
 
+<<<<<<< HEAD
     board = BoardShim(42, params)
+=======
+    board = BoardShim(board_id, params)
+>>>>>>> 9612f4476577dd0f6aa61db361186a0f0c6be176
     board.prepare_session()
-    board.start_stream ()
+    board.start_stream()
     time.sleep(10)
     # data = board.get_current_board_data (256) # get latest 256 packages or less, doesnt remove them from internal buffer
     data = board.get_board_data()  # get all data and remove it from internal buffer
@@ -23,4 +28,4 @@ def connect_and_read_data():
 
 
 if __name__ == "__main__":
-    connect_and_read_data()
+    connect_and_read_data(board_id=SYNTH)
