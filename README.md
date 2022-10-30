@@ -2,6 +2,8 @@
 
 ### In Progress Project in Automating usage of ML with EEG data
 
+# Checkout our [SITE](https://leonardoferrisi.github.io/NTX2022Hackathon/)
+
 # Tasks:
 
 - Setup connection scripts that function in streaming EEG
