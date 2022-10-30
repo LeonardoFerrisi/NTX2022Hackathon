@@ -10,15 +10,8 @@ MUSE2016 = 42
 def connect_and_read_data(board_id, serial_port=None):
     params = BrainFlowInputParams()
 
-<<<<<<< HEAD
 
     board = BoardShim(42, params)
-=======
-    if board_id != -1: 
-        assert serial_port != None
-        params.serial_port = serial_port
-            
->>>>>>> 5c5afe7073a5cb8ec10bf2e4c92e187034c33d8f
     board = BoardShim(board_id, params)
     board.prepare_session()
     board.start_stream()
